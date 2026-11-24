@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080e20">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="ZeroClaw Solana Pay is a developer CLI that creates Solana payment links and QR codes for SOL and USDC and checks whether each payment arrived. US$200 one-time license.">
+  <meta name="description" content="ZeroClaw Solana Pay creates Solana payment links and QR codes for SOL and USDC and checks whether each payment arrived. Ready-to-install Ubuntu app with a US$200 one-time license, or the free open-source core.">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ZeroClaw Solana Pay">
   <meta property="og:title" content="ZeroClaw Solana Pay — Accept SOL and USDC payments in your app">
-  <meta property="og:description" content="A developer CLI for Solana payment links, QR codes, and payment status checks. US$200 one-time.">
+  <meta property="og:description" content="Solana payment links, QR codes and payment status checks. Ubuntu app, US$200 one-time, or the free open-source core.">
   <meta property="og:url" content="https://asroryandesfar-art.github.io/zeroclaw-website/">
   <meta property="og:image" content="https://i.ytimg.com/vi/t4aPitLXOmo/hqdefault.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -40,6 +40,7 @@
         <a href="#how-it-works">How it works</a>
         <a href="#download">Download</a>
         <a href="#pricing">Pricing</a>
+        <a href="#open-source">Open source</a>
         <a href="#faq">FAQ</a>
         <a class="nav-contact" href="#contact" data-sales>Contact Sales <span aria-hidden="true">↗</span></a>
       </nav>
@@ -50,9 +51,9 @@
     <section class="hero section" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="eyebrow-line"></span> Developer CLI for Solana payments</p>
+          <p class="eyebrow"><span class="eyebrow-line"></span> Solana payments for Ubuntu</p>
           <h1 id="hero-title">Accept <span class="gradient-text">SOL and USDC</span> payments in your app</h1>
-          <p class="hero-description">ZeroClaw Solana Pay is a command-line tool for developers. It creates a Solana payment link or QR code for each order and checks whether the payment arrived. Your customer pays from their own wallet, and the money goes straight to your wallet.</p>
+          <p class="hero-description">ZeroClaw Solana Pay is a terminal app for Ubuntu that opens from your app menu. It creates a Solana payment link or QR code for each order and checks whether the payment arrived. Your customer pays from their own wallet, and the money goes straight to your wallet.</p>
           <div class="hero-actions"><a class="button button-primary" href="#contact" data-sales>Contact Sales <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#demo">Watch Demo <span aria-hidden="true">▶</span></a></div>
           <div class="hero-proof"><span><i class="proof-dot" aria-hidden="true"></i> Supports Solana Mainnet</span><span><i class="proof-dot proof-dot-violet" aria-hidden="true"></i> US$200 one-time</span></div>
         </div>
@@ -63,7 +64,7 @@
             <div class="console-heading"><span class="console-icon" aria-hidden="true">◎</span><div><strong>Order #124 · 25 USDC</strong><small>Example flow</small></div></div>
             <div class="console-line"><span>01</span><div><strong>Payment link and QR created</strong><small>Unique reference for this order</small></div><b class="line-check" aria-hidden="true">✓</b></div>
             <div class="console-line"><span>02</span><div><strong>Customer pays in their wallet</strong><small>SOL or USDC</small></div><b class="line-check" aria-hidden="true">✓</b></div>
-            <div class="console-line"><span>03</span><div><strong>Status checked with the CLI</strong><small>pending → paid</small></div><b class="line-check" aria-hidden="true">✓</b></div>
+            <div class="console-line"><span>03</span><div><strong>Status checked on chain</strong><small>pending → paid</small></div><b class="line-check" aria-hidden="true">✓</b></div>
             <div class="console-divider"></div>
             <div class="console-footer"><span><i class="status-pulse" aria-hidden="true"></i> Funds go to your wallet</span><span>NON-CUSTODIAL</span></div>
           </div>
@@ -88,28 +89,26 @@
         <div>
           <div class="section-intro reveal"><p class="section-kicker">HOW IT WORKS</p><h2 id="how-title">Three steps<br><span>for every order.</span></h2></div>
           <ol class="workflow-list">
-            <li class="reveal"><span class="step-number">01</span><div><h3>Create a link or QR</h3><p>You run one command for an order. It returns a Solana Pay link with a unique reference, and can save it as a QR image.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
+            <li class="reveal"><span class="step-number">01</span><div><h3>Create a link or QR</h3><p>Choose Create Payment for an order. You get a Solana Pay link with a unique reference, and can save it as a QR image.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
             <li class="reveal"><span class="step-number">02</span><div><h3>Your customer pays</h3><p>The customer opens the link or scans the QR in their Solana wallet and pays in SOL or USDC. Funds go directly to your wallet.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
-            <li class="reveal"><span class="step-number">03</span><div><h3>Check the status</h3><p>You run the CLI again with the order reference. It reads the blockchain and reports whether the order is still pending or paid.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
+            <li class="reveal"><span class="step-number">03</span><div><h3>Check the status</h3><p>Choose Check Payment Status. ZeroClaw reads the blockchain and reports whether the order is still pending or paid.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
           </ol>
         </div>
-        <div class="code-window reveal"><div class="code-titlebar"><span><i></i><i></i><i></i></span><span>DEVNET EXAMPLE</span></div><pre aria-label="Example commands"><code><span class="code-comment"># Install the package and activate your license</span>
-<span class="code-prompt">$</span> npm install --offline --ignore-scripts --no-audit --no-fund \
-    /path/to/asrori24-zeroclaw-solana-pay-0.1.0.tgz
-<span class="code-prompt">$</span> ZSP=./node_modules/.bin/zeroclaw-solana-pay
-<span class="code-prompt">$</span> $ZSP activate --key-file /path/to/your-license.key
+        <div class="code-window reveal"><div class="code-titlebar"><span><i></i><i></i><i></i></span><span>OPEN-SOURCE CORE · DEVNET</span></div><pre aria-label="Example commands"><code><span class="code-comment"># Build the open-source core (no token needed)</span>
+<span class="code-prompt">$</span> cargo build --release --locked
+<span class="code-prompt">$</span> ZSP=./target/release/solpay
 
 <span class="code-comment"># 1. Create a payment link for one order (1 USDC)</span>
-<span class="code-prompt">$</span> $ZSP run create-url --amount 1 --token USDC
+<span class="code-prompt">$</span> $ZSP create-url --amount 1 --token USDC --order-id ORDER-1
 
 <span class="code-comment">#    Save it as a QR image</span>
-<span class="code-prompt">$</span> $ZSP run render-qr --url "$PAYMENT_URL" --out invoice.png
+<span class="code-prompt">$</span> $ZSP render-qr --url "$PAYMENT_URL" --out invoice.png
 
 <span class="code-comment"># 2. Your customer scans the QR and pays</span>
 
 <span class="code-comment"># 3. Check the payment status</span>
-<span class="code-prompt">$</span> $ZSP run settle --reference "$REFERENCE"
-<span class="code-success">{ "status": "pending", "newly_settled": false }</span></code></pre><div class="code-footer">Set your public wallet and devnet settings first; the included guide lists every step.</div></div>
+<span class="code-prompt">$</span> $ZSP settle --reference "$REFERENCE"
+<span class="code-success">{ "status": "pending", "newly_settled": false }</span></code></pre><div class="code-footer">Set your public Devnet wallet first; the <a href="#open-source">open-source core</a> README lists every step. The Ubuntu app does the same from a menu.</div></div>
       </div>
     </section>
 
@@ -119,29 +118,36 @@
             <li><span class="step-number">01</span><div><h3>Install</h3><p>Open the downloaded file and click Install.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
             <li><span class="step-number">02</span><div><h3>Open ZeroClaw</h3><p>Find ZeroClaw Solana Pay in your app menu.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
             <li><span class="step-number">03</span><div><h3>Activate</h3><p>Paste the access token from your purchase message and press Enter.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
-            <li><span class="step-number">04</span><div><h3>Try it on Devnet</h3><p>Open How to use ZeroClaw and choose Create your first Devnet invoice.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
+            <li><span class="step-number">04</span><div><h3>Try it on Devnet</h3><p>Open How to Use and choose Create your first Devnet invoice.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
           </ol></div>
-        <div class="pricing-card reveal"><div class="pricing-header"><span>ZEROCLAW SOLANA PAY</span><span class="pricing-chip">v0.1.0</span></div><p class="pricing-subtitle">Ubuntu installer (.deb)</p><ul class="pricing-features"><li><span>✓</span> Ubuntu 22.04 or newer, 64-bit (amd64)</li><li><span>✓</span> Tested on Ubuntu 26.04</li><li><span>✓</span> Opens from the app menu, no npm needed</li><li><span>✓</span> Needs an access token to activate</li></ul><a class="button button-primary checkout-button" href="./downloads/zeroclaw-solana-pay_0.1.0_amd64.deb" download data-download>Download ZeroClaw <span aria-hidden="true">↓</span></a><p class="checkout-caption">zeroclaw-solana-pay_0.1.0_amd64.deb · 14 KB<br>SHA-256 <code class="sha">5e66bbed92f1b4cf8c9ca03220cf3780fc7dc8b21ca053db41cbe40879087b55</code></p></div>
+        <div class="pricing-card reveal"><div class="pricing-header"><span>ZEROCLAW SOLANA PAY</span><span class="pricing-chip">v0.1.0</span></div><p class="pricing-subtitle">Ubuntu installer (.deb)</p><ul class="pricing-features"><li><span>✓</span> Ubuntu 22.04 or newer, 64-bit (amd64)</li><li><span>✓</span> Tested on Ubuntu 26.04</li><li><span>✓</span> Opens from the app menu, no npm needed</li><li><span>✓</span> Needs an access token to activate</li></ul><a class="button button-primary checkout-button" href="./downloads/zeroclaw-solana-pay_0.1.0_amd64.deb" download data-download>Download ZeroClaw <span aria-hidden="true">↓</span></a><p class="checkout-caption">zeroclaw-solana-pay_0.1.0_amd64.deb · 15 KB<br>SHA-256 <code class="sha">d9085214a44ec3b1a280c824f26179b99850fc7f0bd684398539796817fb7414</code></p></div>
       </div>
     </section>
 
     <section class="section license-section" id="pricing" aria-labelledby="pricing-title">
-      <div class="container license-grid"><div class="license-copy reveal"><p class="section-kicker">PRICING AND HOW TO BUY</p><h2 id="pricing-title">One price.<br><span>No subscription.</span></h2><p>Orders are processed manually. Contact Sales to buy. After your payment is confirmed, you receive the <strong>.tgz</strong> package file, your license, and the installation guide.</p><p>Install with npm and activate your license.</p><div class="license-disclosure"><span aria-hidden="true">ⓘ</span><p>Supports Solana Mainnet. The payment workflow was tested on Solana Devnet. Run a small test payment before you take live orders.</p></div></div>
-        <div class="pricing-card reveal"><div class="pricing-header"><span>ZEROCLAW SOLANA PAY</span><span class="pricing-chip">ONE-TIME</span></div><p class="price">US$200 <small>one-time</small></p><p class="pricing-subtitle">Commercial license for one buyer</p><ul class="pricing-features"><li><span>✓</span> Private package (.tgz) for Linux x64</li><li><span>✓</span> Personal license file to activate the CLI</li><li><span>✓</span> Installation guide</li><li><span>✓</span> Updates for 12 months</li><li><span>✓</span> Technical support for 90 days</li><li><span>✓</span> Keeps working after updates end</li></ul><a class="button button-primary checkout-button" href="#contact" data-sales>Contact Sales <span aria-hidden="true">↗</span></a><p class="checkout-caption">No payment is taken on this website.</p></div>
+      <div class="container license-grid"><div class="license-copy reveal"><p class="section-kicker">PRICING AND HOW TO BUY</p><h2 id="pricing-title">One price.<br><span>No subscription.</span></h2><p>Orders are processed manually. Contact Sales to buy. After your payment is confirmed, you receive <strong>one access token</strong> for your order on WhatsApp.</p><p><a href="#download">Download ZeroClaw for Ubuntu</a>, open it and paste the token to activate.</p><div class="license-disclosure"><span aria-hidden="true">ⓘ</span><p>Supports Solana Mainnet. The payment workflow was tested on Solana Devnet. Run a small test payment before you take live orders.</p></div></div>
+        <div class="pricing-card reveal"><div class="pricing-header"><span>ZEROCLAW SOLANA PAY</span><span class="pricing-chip">ONE-TIME</span></div><p class="price">US$200 <small>one-time</small></p><p class="pricing-subtitle">Commercial license for one buyer</p><ul class="pricing-features"><li><span>✓</span> Official Ubuntu app, ready to install</li><li><span>✓</span> One access token per order</li><li><span>✓</span> Step-by-step guide inside the app</li><li><span>✓</span> Updates for 12 months</li><li><span>✓</span> Technical support for 90 days</li><li><span>✓</span> Keeps working after updates end</li></ul><a class="button button-primary checkout-button" href="#contact" data-sales>Contact Sales <span aria-hidden="true">↗</span></a><p class="checkout-caption">No payment is taken on this website.</p></div>
+      </div>
+    </section>
+
+    <section class="section license-section" id="open-source" aria-labelledby="open-source-title">
+      <div class="container license-grid"><div class="license-copy reveal"><p class="section-kicker">OPEN-SOURCE CORE</p><h2 id="open-source-title">The code is open.<br><span>Free, no token.</span></h2><p>The payment engine behind ZeroClaw is open source. Build it yourself to create Solana Pay links and QR codes and check payments from the command line. No account, token or license is needed.</p><p>The official Ubuntu app is the ready-to-install edition with a menu icon, guided activation and an in-app guide.</p></div>
+        <div class="pricing-card reveal"><div class="pricing-header"><span>ZEROCLAW SOLANA PAY CORE</span><span class="pricing-chip">FREE</span></div><p class="pricing-subtitle">Source code for developers</p><ul class="pricing-features"><li><span>✓</span> MIT or Apache-2.0</li><li><span>✓</span> Rust command-line tool</li><li><span>✓</span> SOL and USDC, Devnet by default</li><li><span>✓</span> No token or license key</li></ul><a class="button button-outline checkout-button" href="https://github.com/asroryandesfar-art/zeroclaw-solana-pay-core" target="_blank" rel="noopener noreferrer" data-core-link>View the code on GitHub <span aria-hidden="true">↗</span></a><p class="checkout-caption">No support or updates guarantee for the free core.</p></div>
       </div>
     </section>
 
     <section class="section faq-section" id="faq" aria-labelledby="faq-title"><div class="container faq-grid"><div class="faq-intro reveal"><p class="section-kicker">FAQ</p><h2 id="faq-title">Good<br><span>to know.</span></h2></div><div class="faq-list reveal">
-      <details><summary>Who is this for?<span aria-hidden="true">+</span></summary><p>Developers who want to accept SOL or USDC in their own app or store. It is a command-line tool, not a hosted checkout page.</p></details>
-      <details><summary>Do you hold my money or my keys?<span aria-hidden="true">+</span></summary><p>No. Your customer pays from their own wallet straight to your wallet. The CLI only needs your public wallet address and reads the blockchain to check the payment.</p></details>
-      <details><summary>Does it support Solana Mainnet?<span aria-hidden="true">+</span></summary><p>Supports Solana Mainnet. The payment workflow was tested on Solana Devnet. Devnet is the default; the included guide shows the settings that switch the CLI to Mainnet. Run a small test payment before you take live orders.</p></details>
-      <details><summary>What do I need to run it?<span aria-hidden="true">+</span></summary><p>Linux x64 with glibc 2.34 or newer, Node.js 20 or newer, and npm. You also need a Solana RPC endpoint and your public wallet address.</p></details>
+      <details><summary>Who is this for?<span aria-hidden="true">+</span></summary><p>Shops and developers who want to accept SOL or USDC. The Ubuntu app runs in a terminal window from your app menu; developers can also build the open-source core. It is not a hosted checkout page.</p></details>
+      <details><summary>Do you hold my money or my keys?<span aria-hidden="true">+</span></summary><p>No. Your customer pays from their own wallet straight to your wallet. ZeroClaw only needs your public wallet address and reads the blockchain to check the payment.</p></details>
+      <details><summary>Does it support Solana Mainnet?<span aria-hidden="true">+</span></summary><p>Supports Solana Mainnet. The payment workflow was tested on Solana Devnet. Devnet is the default; switch to Mainnet in Settings after adding your own Mainnet RPC endpoint. Run a small test payment before you take live orders.</p></details>
+      <details><summary>What do I need to run it?<span aria-hidden="true">+</span></summary><p>Ubuntu 22.04 or newer, 64-bit (amd64), an internet connection to activate, and your public wallet address. Mainnet also needs your own Solana RPC endpoint.</p></details>
+      <details><summary>Is there a free version?<span aria-hidden="true">+</span></summary><p>Yes. The <a href="#open-source">open-source core</a> (MIT or Apache-2.0) is free and needs no token. You build and run it yourself from the command line. The US$200 license buys the ready-to-install Ubuntu app.</p></details>
       <details><summary>Does the license expire?<span aria-hidden="true">+</span></summary><p>No. The version you receive keeps working. Updates are included for 12 months and technical support for 90 days.</p></details>
     </div></div></section>
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-card reveal"><div><p class="section-kicker">CONTACT SALES</p><h2 id="contact-title">Buy a US$200<br><span>license.</span></h2><p data-sales-note>Our sales contact is being set up and will appear here before orders open. No payment is taken on this website.</p></div><a class="button button-light" href="#contact" data-sales data-sales-primary hidden>Contact Sales <span aria-hidden="true">↗</span></a></div></section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-main"><a class="brand" href="#top" aria-label="ZeroClaw Solana Pay, back to top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M8 10h20L8 26h20" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28" cy="10" r="2.1" fill="currentColor"/></svg></span><span class="brand-name">ZeroClaw <span>Solana Pay</span></span></a><p>Accept SOL and USDC payments in your app.</p><div class="footer-links"><a href="#demo">Demo</a><a href="#how-it-works">How it works</a><a href="#download">Download</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="https://github.com/asroryandesfar-art" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> ZeroClaw Solana Pay</span><span>Independent Solana Pay tool. Not affiliated with ZeroClaw Labs.</span></div></footer>
+  <footer class="site-footer"><div class="container footer-main"><a class="brand" href="#top" aria-label="ZeroClaw Solana Pay, back to top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M8 10h20L8 26h20" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28" cy="10" r="2.1" fill="currentColor"/></svg></span><span class="brand-name">ZeroClaw <span>Solana Pay</span></span></a><p>Accept SOL and USDC payments in your app.</p><div class="footer-links"><a href="#demo">Demo</a><a href="#how-it-works">How it works</a><a href="#download">Download</a><a href="#pricing">Pricing</a><a href="#open-source">Open source</a><a href="#faq">FAQ</a><a href="https://github.com/asroryandesfar-art" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> ZeroClaw Solana Pay</span><span>Independent Solana Pay tool. Not affiliated with ZeroClaw Labs.</span></div></footer>
 </body>
 </html>
