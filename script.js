@@ -32,26 +32,31 @@
   const year = document.querySelector("#year");
   if (year) year.textContent = String(new Date().getFullYear());
 
-  const checkoutButton = document.querySelector("[data-checkout]");
-  const checkoutCaption = document.querySelector("[data-checkout-caption]");
-  const configuredUrl = window.ZEROCLAW_SITE_CONFIG?.checkoutUrl;
-  if (checkoutButton && typeof configuredUrl === "string" && configuredUrl.trim()) {
+  // Contact Sales: every [data-sales] link opens the configured official
+  // contact. Until one is configured they point to #contact, which says so.
+  const salesContact = window.ZEROCLAW_SITE_CONFIG?.salesContact;
+  let salesHref = null;
+  if (typeof salesContact === "string" && salesContact.trim()) {
     try {
-      const url = new URL(configuredUrl);
-      const officialHost = url.hostname === "lemonsqueezy.com" || url.hostname.endsWith(".lemonsqueezy.com");
-      if (url.protocol === "https:" && officialHost && !url.username && !url.password) {
-        const link = document.createElement("a");
-        link.className = checkoutButton.className;
-        link.href = url.href;
+      const url = new URL(salesContact.trim());
+      const isMail = url.protocol === "mailto:" && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(decodeURIComponent(url.pathname));
+      const isWeb = url.protocol === "https:" && !url.username && !url.password;
+      if (isMail || isWeb) salesHref = url.href;
+    } catch {
+      // An invalid value keeps the "being set up" message.
+    }
+  }
+  if (salesHref) {
+    document.querySelectorAll("[data-sales]").forEach((link) => {
+      link.href = salesHref;
+      if (salesHref.startsWith("https:")) {
         link.target = "_blank";
         link.rel = "noopener noreferrer";
-        link.textContent = "Buy lifetime license ↗";
-        checkoutButton.replaceWith(link);
-        if (checkoutCaption) checkoutCaption.textContent = "Secure checkout opens on Lemon Squeezy.";
       }
-    } catch {
-      // An invalid URL leaves the checkout visibly unavailable.
-    }
+      link.hidden = false;
+    });
+    const note = document.querySelector("[data-sales-note]");
+    if (note) note.textContent = "Tell us your name and company. We will confirm your order and how to pay. No payment is taken on this website.";
   }
 
   if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {

@@ -1,17 +1,21 @@
 # ZeroClaw Solana Pay website
 
-Public, buildless landing page hosted from `main` at the repository root through GitHub Pages. Its local assets use relative URLs for the `/zeroclaw-website/` project path.
+Public, buildless product page hosted from `main` at the repository root through GitHub Pages. Its local assets use relative URLs for the `/zeroclaw-website/` project path.
 
-Only public website files belong here. No payment engine source, private keys, API credentials, environment files, databases, or license signing material.
+Only public website files belong here. Never add the private `.tgz` package, license files, access tokens, payment engine source, private keys, API credentials, environment files, or databases.
 
-## Checkout configuration
+## Sections
 
-`config.js` starts with an empty `checkoutUrl`. The buy button reads **Checkout coming soon** and cannot open a checkout. When an official Lemon Squeezy link exists, set that value after reviewing the URL and completing the buyer journey. The site accepts HTTPS links on `lemonsqueezy.com` or its subdomains only.
+Hero, demo video (https://youtu.be/t4aPitLXOmo, recorded on Solana devnet), how it works (three steps plus commands tested against the released package), pricing (US$200 one-time, manual orders), FAQ, and Contact Sales.
+
+## Contact Sales
+
+Every **Contact Sales** button reads `salesContact` from `config.js`. It accepts only a `mailto:` address or an `https://` URL. While it is empty, the buttons scroll to the contact section, which says the sales contact is being set up. Set the official contact there; no checkout runs on this site and no payment is taken here.
 
 ## Preview
 
-Run `python3 -m http.server 8000` in this directory, then visit `http://localhost:8000/`.
+Serve this directory with any static server, for example `npx http-server -a 127.0.0.1 -p 8799 .`, then visit `http://127.0.0.1:8799/`.
 
 ## Disclosure
 
-The $200 lifetime offer includes permanent non-exclusive business use, 12 months of updates, and 90 days of support. Automated Rust tests and public Mainnet read-only checks have passed, but a real paid Mainnet SOL/USDC invoice has not yet been verified end to end. Live WhatsApp delivery remains unverified. The existing Rust core retains its MIT/Apache-2.0 rights; the paid offer adds distribution, updates, and support.
+Tested on Solana devnet. A real paid Mainnet SOL/USDC payment has not yet been verified end to end. The existing Rust core keeps its MIT/Apache-2.0 rights; the paid offer adds the packaged distribution, license, updates, and support.

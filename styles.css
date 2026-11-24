@@ -304,3 +304,12 @@ p { color: var(--muted); }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .motion-enabled .reveal { opacity: 1; transform: none; }
 }
+
+/* Demo video */
+[hidden] { display: none !important; }
+.demo-section .section-intro { margin-bottom: 40px; }
+.video-frame { position: relative; overflow: hidden; aspect-ratio: 16 / 9; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-deep); box-shadow: 0 30px 80px rgba(0, 0, 0, .35); }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-link { margin: 18px 0 0; text-align: center; }
+.video-link a { color: var(--cyan); font-weight: 700; }
+.video-link a:hover { text-decoration: underline; }

@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080e20">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="ZeroClaw Solana Pay is a non-custodial SOL and USDC payment verification toolkit for AI agents. Explore the workflow and $200 lifetime commercial license.">
+  <meta name="description" content="ZeroClaw Solana Pay is a developer CLI that creates Solana payment links and QR codes for SOL and USDC and checks whether each payment arrived. US$200 one-time license.">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ZeroClaw Solana Pay">
-  <meta property="og:title" content="ZeroClaw Solana Pay — Payment verification for AI agents">
-  <meta property="og:description" content="Reference-bound SOL and USDC verification, a durable invoice ledger, and a non-custodial architecture. Live Mainnet settlement remains to be validated.">
+  <meta property="og:title" content="ZeroClaw Solana Pay — Accept SOL and USDC payments in your app">
+  <meta property="og:description" content="A developer CLI for Solana payment links, QR codes, and payment status checks. US$200 one-time.">
   <meta property="og:url" content="https://asroryandesfar-art.github.io/zeroclaw-website/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://i.ytimg.com/vi/t4aPitLXOmo/hqdefault.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ZeroClaw Solana Pay">
-  <meta name="twitter:description" content="Non-Custodial SOL &amp; USDC Payment Verification for AI Agents">
+  <meta name="twitter:description" content="Accept SOL and USDC payments in your app.">
   <link rel="canonical" href="https://asroryandesfar-art.github.io/zeroclaw-website/">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
-  <title>ZeroClaw Solana Pay | SOL &amp; USDC Verification for AI Agents</title>
+  <title>ZeroClaw Solana Pay | Accept SOL and USDC payments in your app</title>
   <script defer src="./config.js"></script>
   <script defer src="./script.js"></script>
 </head>
@@ -35,12 +36,11 @@
       </a>
       <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
       <nav class="nav" id="primary-nav" aria-label="Primary navigation">
-        <a href="#overview">Overview</a>
-        <a href="#verification">Verification</a>
-        <a href="#workflow">Workflow</a>
-        <a href="#developers">Developers</a>
-        <a href="#license">License</a>
-        <a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+        <a href="#demo">Demo</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-contact" href="#contact" data-sales>Contact Sales <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
@@ -49,114 +49,86 @@
     <section class="hero section" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="eyebrow-line"></span> Payment infrastructure for agent-led commerce</p>
-          <h1 id="hero-title">Payments you can <span class="gradient-text">verify.</span><br>Architecture you can <span class="gradient-text-alt">trust.</span></h1>
-          <p class="hero-tagline">Non-Custodial SOL &amp; USDC Payment Verification for AI Agents</p>
-          <p class="hero-description">Turn an invoice into a reference-bound on-chain check, then record settlement in a durable ledger. Built for Solana workflows where evidence matters more than a payment screenshot.</p>
-          <div class="hero-actions"><a class="button button-primary" href="#workflow">Explore the workflow <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#license">View license <span aria-hidden="true">→</span></a></div>
-          <div class="hero-proof"><span><i class="proof-dot" aria-hidden="true"></i> Automated checks completed</span><span><i class="proof-dot proof-dot-violet" aria-hidden="true"></i> Live Mainnet pilot pending</span></div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> Developer CLI for Solana payments</p>
+          <h1 id="hero-title">Accept <span class="gradient-text">SOL and USDC</span> payments in your app</h1>
+          <p class="hero-description">ZeroClaw Solana Pay is a command-line tool for developers. It creates a Solana payment link or QR code for each order and checks whether the payment arrived. Your customer pays from their own wallet, and the money goes straight to your wallet.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#contact" data-sales>Contact Sales <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#demo">Watch Demo <span aria-hidden="true">▶</span></a></div>
+          <div class="hero-proof"><span><i class="proof-dot" aria-hidden="true"></i> Tested on Solana devnet</span><span><i class="proof-dot proof-dot-violet" aria-hidden="true"></i> US$200 one-time</span></div>
         </div>
-        <div class="hero-visual reveal" aria-label="Illustrative payment verification flow">
+        <div class="hero-visual reveal" aria-label="Example: one order from payment request to status check">
           <div class="visual-orbit orbit-one" aria-hidden="true"></div><div class="visual-orbit orbit-two" aria-hidden="true"></div>
           <div class="console-card">
-            <div class="console-topline"><span class="console-indicator"><i></i> VERIFICATION FLOW</span><span aria-hidden="true">⌘</span></div>
-            <div class="console-heading"><span class="console-icon" aria-hidden="true">◎</span><div><strong>Invoice to evidence</strong><small>Illustrative product flow</small></div></div>
-            <div class="console-line"><span>01</span><div><strong>Invoice created</strong><small>Unique reference · fixed amount</small></div><b class="line-check" aria-hidden="true">✓</b></div>
-            <div class="console-line"><span>02</span><div><strong>On-chain transaction</strong><small>SOL or canonical USDC</small></div><b class="line-check" aria-hidden="true">✓</b></div>
-            <div class="console-line"><span>03</span><div><strong>Evidence evaluated</strong><small>Finality · recipient · amount</small></div><b class="line-pending" aria-hidden="true">•••</b></div>
+            <div class="console-topline"><span class="console-indicator"><i></i> ONE ORDER</span><span aria-hidden="true">⌘</span></div>
+            <div class="console-heading"><span class="console-icon" aria-hidden="true">◎</span><div><strong>Order #124 · 25 USDC</strong><small>Example flow</small></div></div>
+            <div class="console-line"><span>01</span><div><strong>Payment link and QR created</strong><small>Unique reference for this order</small></div><b class="line-check" aria-hidden="true">✓</b></div>
+            <div class="console-line"><span>02</span><div><strong>Customer pays in their wallet</strong><small>SOL or USDC</small></div><b class="line-check" aria-hidden="true">✓</b></div>
+            <div class="console-line"><span>03</span><div><strong>Status checked with the CLI</strong><small>pending → paid</small></div><b class="line-check" aria-hidden="true">✓</b></div>
             <div class="console-divider"></div>
-            <div class="console-footer"><span><i class="status-pulse" aria-hidden="true"></i> Mainnet live pilot pending</span><span>NON-CUSTODIAL</span></div>
+            <div class="console-footer"><span><i class="status-pulse" aria-hidden="true"></i> Funds go to your wallet</span><span>NON-CUSTODIAL</span></div>
           </div>
           <div class="floating-pill pill-sol" aria-hidden="true"><span class="coin-sol">◎</span> SOL</div>
           <div class="floating-pill pill-usdc" aria-hidden="true"><span class="coin-usdc">$</span> USDC</div>
         </div>
       </div>
-      <div class="container hero-bottom"><span>01 / 07</span><span class="hero-bottom-line"></span><span>BUILT FOR CLEAR PAYMENT EVIDENCE</span></div>
     </section>
 
-    <section class="status-banner" aria-label="Current validation status"><div class="container status-inner"><span class="status-label">CURRENT STATUS</span><p>Implementation and automated testing cover the documented code paths. <strong>Real SOL and USDC Mainnet settlement has not yet been verified end to end.</strong></p><a href="#faq">Read the FAQ <span aria-hidden="true">↗</span></a></div></section>
-
-    <section class="section section-overview" id="overview" aria-labelledby="overview-title">
+    <section class="section demo-section" id="demo" aria-labelledby="demo-title">
       <div class="container">
-        <div class="section-intro reveal"><p class="section-kicker">01 — THE PRODUCT</p><h2 id="overview-title">Payment signals are easy.<br><span>Payment proof is harder.</span></h2><p>ZeroClaw Solana Pay gives agent workflows a structured way to issue requests, examine chain evidence, and record a one-time settlement decision.</p></div>
-        <div class="feature-grid">
-          <article class="feature-card reveal"><div class="feature-icon icon-cyan" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M6 8h20M6 16h12M6 24h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="23" cy="16" r="3" stroke="currentColor" stroke-width="2"/></svg></div><p class="card-number">/ 01</p><h3>Reference-bound invoices</h3><p>Every request carries a unique reference and locked payment terms, giving the verifier a specific invoice to evaluate.</p></article>
-          <article class="feature-card reveal"><div class="feature-icon icon-purple" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3 27 8v8c0 7-4 11-11 13C9 27 5 23 5 16V8l11-5Z" stroke="currentColor" stroke-width="2"/><path d="m11 16 3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="card-number">/ 02</p><h3>Evidence-first verification</h3><p>Checks signature, finality, transfer instruction, destination, amount, mint, and invoice window before settlement.</p></article>
-          <article class="feature-card reveal"><div class="feature-icon icon-blue" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><rect x="5" y="5" width="22" height="22" rx="5" stroke="currentColor" stroke-width="2"/><path d="M11 12h10M11 17h10M11 22h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><p class="card-number">/ 03</p><h3>Durable decisions</h3><p>A SQLite invoice ledger uses atomic signature claims and audit events to support repeat calls without double settlement.</p></article>
+        <div class="section-intro reveal"><p class="section-kicker">DEMO · 1 MIN 28 S</p><h2 id="demo-title">Demo: create a payment QR<br><span>and check it on Solana devnet.</span></h2><p>The recording shows a Solana Pay QR code being created for SOL and USDC payments and the transaction being verified. It was recorded on Solana devnet, so no real money moved.</p></div>
+        <div class="video-frame reveal">
+          <iframe src="https://www.youtube-nocookie.com/embed/t4aPitLXOmo" title="ZeroClaw Solana Pay demo: create a payment QR and check the payment on Solana devnet" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
+        <p class="video-link reveal"><a href="https://youtu.be/t4aPitLXOmo" target="_blank" rel="noopener noreferrer" data-demo-link>Watch on YouTube <span aria-hidden="true">↗</span></a></p>
       </div>
     </section>
 
-    <section class="section verification-section" id="verification" aria-labelledby="verification-title">
-      <div class="container">
-        <div class="section-heading-row reveal"><div><p class="section-kicker">02 — ASSET VERIFICATION</p><h2 id="verification-title">Built for the details<br><span>that make a payment real.</span></h2></div><p>Two assets. One principle: a successful transfer must match the invoice on chain before the ledger can mark it paid.</p></div>
-        <div class="asset-grid">
-          <article class="asset-card asset-sol reveal"><div class="asset-card-top"><div class="asset-badge"><span class="coin-sol">◎</span> SOL</div><span class="asset-network">NATIVE TRANSFER</span></div><h3>Native SOL, verified at the instruction level.</h3><p>Requires a successful finalized transaction, the merchant wallet as recipient, enough lamports, a balance increase, and the invoice reference on the transfer instruction.</p><ul class="check-list"><li>Signature and network identity</li><li>System transfer, recipient, and lamports</li><li>Reference, timing, and replay protection</li></ul></article>
-          <article class="asset-card asset-usdc reveal"><div class="asset-card-top"><div class="asset-badge"><span class="coin-usdc">$</span> USDC</div><span class="asset-network">SPL TOKEN</span></div><h3>Canonical USDC, not a lookalike token.</h3><p>Checks the approved mint, legacy Token Program, merchant-owned associated token account, six-decimal base-unit amount, and final transaction evidence.</p><ul class="check-list"><li>Canonical mint and trusted decimals</li><li>Token program, recipient account, and owner</li><li>Reference, timing, and replay protection</li></ul></article>
+    <section class="section workflow-section" id="how-it-works" aria-labelledby="how-title">
+      <div class="container developer-grid">
+        <div>
+          <div class="section-intro reveal"><p class="section-kicker">HOW IT WORKS</p><h2 id="how-title">Three steps<br><span>for every order.</span></h2></div>
+          <ol class="workflow-list">
+            <li class="reveal"><span class="step-number">01</span><div><h3>Create a link or QR</h3><p>You run one command for an order. It returns a Solana Pay link with a unique reference, and can save it as a QR image.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
+            <li class="reveal"><span class="step-number">02</span><div><h3>Your customer pays</h3><p>The customer opens the link or scans the QR in their Solana wallet and pays in SOL or USDC. Funds go directly to your wallet.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
+            <li class="reveal"><span class="step-number">03</span><div><h3>Check the status</h3><p>You run the CLI again with the order reference. It reads the blockchain and reports whether the order is still pending or paid.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
+          </ol>
         </div>
-        <p class="section-note reveal">The parser and decision paths have automated tests and public Mainnet read-only checks. A real paid Mainnet invoice is still required before production claims.</p>
+        <div class="code-window reveal"><div class="code-titlebar"><span><i></i><i></i><i></i></span><span>DEVNET EXAMPLE</span></div><pre aria-label="Example commands"><code><span class="code-comment"># Install the package and activate your license</span>
+<span class="code-prompt">$</span> npm install --offline --ignore-scripts --no-audit --no-fund \
+    /path/to/asrori24-zeroclaw-solana-pay-0.1.0.tgz
+<span class="code-prompt">$</span> ZSP=./node_modules/.bin/zeroclaw-solana-pay
+<span class="code-prompt">$</span> $ZSP activate --key-file /path/to/your-license.key
+
+<span class="code-comment"># 1. Create a payment link for one order (1 USDC)</span>
+<span class="code-prompt">$</span> $ZSP run create-url --amount 1 --token USDC
+
+<span class="code-comment">#    Save it as a QR image</span>
+<span class="code-prompt">$</span> $ZSP run render-qr --url "$PAYMENT_URL" --out invoice.png
+
+<span class="code-comment"># 2. Your customer scans the QR and pays</span>
+
+<span class="code-comment"># 3. Check the payment status</span>
+<span class="code-prompt">$</span> $ZSP run settle --reference "$REFERENCE"
+<span class="code-success">{ "status": "pending", "newly_settled": false }</span></code></pre><div class="code-footer">Set your public wallet and devnet settings first; the included guide lists every step.</div></div>
       </div>
     </section>
 
-    <section class="section architecture-section" id="architecture" aria-labelledby="architecture-title">
-      <div class="container architecture-grid">
-        <div class="architecture-copy reveal"><p class="section-kicker">03 — NON-CUSTODIAL BY DESIGN</p><h2 id="architecture-title">Your customer holds<br><span>the signing keys.</span></h2><p>The payer signs in their own wallet. ZeroClaw Solana Pay generates a payment request and reads chain evidence; it does not request or store customer private keys or submit transfers.</p><div class="architecture-callout"><span aria-hidden="true">✳</span><span>Verification is not custody. The merchant receives funds directly in its configured wallet or token account.</span></div></div>
-        <div class="architecture-diagram reveal" aria-label="Customer wallet sends to merchant wallet; verifier reads blockchain evidence and records a ledger decision">
-          <div class="diagram-node"><span class="node-icon" aria-hidden="true">◈</span><span><strong>Customer wallet</strong><small>Signs the payment</small></span></div>
-          <div class="diagram-connector"><span>ON-CHAIN TRANSFER</span></div>
-          <div class="diagram-node merchant-node"><span class="node-icon" aria-hidden="true">⬡</span><span><strong>Merchant wallet</strong><small>Receives SOL or USDC</small></span></div>
-          <div class="diagram-divider"></div>
-          <div class="diagram-node verifier-node"><span class="node-icon" aria-hidden="true">◎</span><span><strong>ZeroClaw verifier</strong><small>Reads evidence · writes ledger</small></span><span class="node-readonly">READ ONLY</span></div>
-        </div>
+    <section class="section license-section" id="pricing" aria-labelledby="pricing-title">
+      <div class="container license-grid"><div class="license-copy reveal"><p class="section-kicker">PRICING AND HOW TO BUY</p><h2 id="pricing-title">One price.<br><span>No subscription.</span></h2><p>Orders are processed manually. Contact Sales to buy. After your payment is confirmed, you receive the <strong>.tgz</strong> package file, your license, and the installation guide.</p><p>Install with npm and activate your license.</p><div class="license-disclosure"><span aria-hidden="true">ⓘ</span><p>Tested on Solana devnet. A real paid Mainnet payment has not yet been verified end to end, so run a small test before you take live orders.</p></div></div>
+        <div class="pricing-card reveal"><div class="pricing-header"><span>ZEROCLAW SOLANA PAY</span><span class="pricing-chip">ONE-TIME</span></div><p class="price">US$200 <small>one-time</small></p><p class="pricing-subtitle">Commercial license for one buyer</p><ul class="pricing-features"><li><span>✓</span> Private package (.tgz) for Linux x64</li><li><span>✓</span> Personal license file to activate the CLI</li><li><span>✓</span> Installation guide</li><li><span>✓</span> Updates for 12 months</li><li><span>✓</span> Technical support for 90 days</li><li><span>✓</span> Keeps working after updates end</li></ul><a class="button button-primary checkout-button" href="#contact" data-sales>Contact Sales <span aria-hidden="true">↗</span></a><p class="checkout-caption">No payment is taken on this website.</p></div>
       </div>
     </section>
 
-    <section class="section workflow-section" id="workflow" aria-labelledby="workflow-title">
-      <div class="container"><div class="section-intro reveal"><p class="section-kicker">04 — THE FLOW</p><h2 id="workflow-title">From request to<br><span>recorded settlement.</span></h2><p>A clear sequence for an agent-assisted checkout. Confirmation comes from blockchain evidence and an atomic ledger claim, never from a chat message or screenshot.</p></div>
-        <ol class="workflow-list">
-          <li class="reveal"><span class="step-number">01</span><div><h3>Create an invoice</h3><p>Lock the order ID, asset, amount, merchant recipient, and expiry; generate a unique reference.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
-          <li class="reveal"><span class="step-number">02</span><div><h3>Share payment instructions</h3><p>Give the customer a Solana Pay URL or QR to open in their own wallet.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
-          <li class="reveal"><span class="step-number">03</span><div><h3>Read finalized chain evidence</h3><p>Inspect the matching signature, transfer instruction, recipient, asset, amount, and reference.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
-          <li class="reveal"><span class="step-number">04</span><div><h3>Claim settlement once</h3><p>Move the invoice to paid only after verification; SQLite rejects reuse of the same signature.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
-          <li class="reveal"><span class="step-number">05</span><div><h3>Respond through your agent</h3><p>Use the typed integration result to notify the customer. Live WhatsApp delivery remains to be validated.</p></div><span class="step-glyph" aria-hidden="true">↗</span></li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section developer-section" id="developers" aria-labelledby="developer-title">
-      <div class="container developer-grid"><div class="developer-copy reveal"><p class="section-kicker">05 — DEVELOPER INTEGRATION</p><h2 id="developer-title">Designed to fit<br><span>agent workflows.</span></h2><p>A Rust CLI handles invoice and settlement decisions. A typed MCP bridge provides a structured path for ZeroClaw v0.8.3 integration without shell interpolation.</p><ul class="developer-points"><li><span>01</span> Stable machine-readable responses</li><li><span>02</span> Persisted invoice terms and order IDs</li><li><span>03</span> Bounded RPC search and failure handling</li></ul><p class="developer-caveat">Direct adapter contract tests have passed; actual WhatsApp routing and notifications have not been verified live.</p></div>
-        <div class="code-window reveal"><div class="code-titlebar"><span><i></i><i></i><i></i></span><span>INTEGRATION / ILLUSTRATIVE</span></div><pre aria-label="Illustrative CLI commands"><code><span class="code-comment"># Issue a registered invoice</span>
-<span class="code-prompt">$</span> solpay create-url \
-  --token USDC \
-  --amount 25 \
-  --order-id ORDER_001
-
-<span class="code-comment"># Verify and claim a finalized payment</span>
-<span class="code-prompt">$</span> solpay settle \
-  --reference &lt;invoice-reference&gt;
-
-<span class="code-comment"># Only a new valid claim can return:</span>
-<span class="code-success">{ "status": "paid", "newly_settled": true }</span></code></pre><div class="code-footer">Requires operator configuration and a live payment test before production use.</div></div>
-      </div>
-    </section>
-
-    <section class="section license-section" id="license" aria-labelledby="license-title">
-      <div class="container license-grid"><div class="license-copy reveal"><p class="section-kicker">06 — COMMERCIAL LICENSING</p><h2 id="license-title">One purchase.<br><span>Long-term use.</span></h2><p>A straightforward commercial offer for teams that want a packaged distribution, updates, and direct support. The installed version remains usable after the update and support windows close.</p><div class="license-disclosure"><span aria-hidden="true">ⓘ</span><p>The existing Rust core is MIT OR Apache-2.0. The commercial offer adds distribution, update, and support entitlements; it does not remove previously granted open-source rights.</p></div></div>
-        <div class="pricing-card reveal"><div class="pricing-header"><span>ZEROCLAW SOLANA PAY</span><span class="pricing-chip">LIFETIME</span></div><p class="price"><span>$</span>200 <small>USD / one-time</small></p><p class="pricing-subtitle">Lifetime Commercial License</p><ul class="pricing-features"><li><span>✓</span> Permanent software use</li><li><span>✓</span> Non-exclusive business license</li><li><span>✓</span> Free updates for 12 months</li><li><span>✓</span> Technical support for 90 days</li><li><span>✓</span> Unique offline-validated license key</li><li><span>✓</span> No recurring subscription</li></ul><button class="button button-primary checkout-button" type="button" disabled data-checkout>Checkout coming soon</button><p class="checkout-caption" data-checkout-caption>Official Lemon Squeezy checkout is not available yet. No payment is collected on this page.</p></div>
-      </div>
-    </section>
-
-    <section class="section faq-section" id="faq" aria-labelledby="faq-title"><div class="container faq-grid"><div class="faq-intro reveal"><p class="section-kicker">07 — FAQ</p><h2 id="faq-title">The important<br><span>questions, answered.</span></h2><p>Clear limits are part of trustworthy payment infrastructure.</p></div><div class="faq-list reveal">
-      <details><summary>Is ZeroClaw Solana Pay production ready on Mainnet?<span aria-hidden="true">+</span></summary><p>Not yet. Automated tests and public Mainnet read-only verification have passed, but an actual SOL and USDC Mainnet invoice has not been paid and settled end to end. A controlled pilot and operational checks are required.</p></details>
-      <details><summary>Do you hold customer funds or private keys?<span aria-hidden="true">+</span></summary><p>No. The customer signs from their own wallet, and the merchant receives payment directly. The verifier reads transaction evidence and records settlement; it does not request or store customer private keys.</p></details>
-      <details><summary>Does the lifetime license expire after 12 months?<span aria-hidden="true">+</span></summary><p>No. The right to use an obtained version is permanent. The 12-month period covers new versions, and the 90-day period covers technical support. Neither date disables the installed software.</p></details>
-      <details><summary>How does the commercial offer relate to open source?<span aria-hidden="true">+</span></summary><p>The existing Rust repository remains MIT OR Apache-2.0. The $200 offer adds a signed commercial distribution plus update and support entitlements; it does not take away previously granted open-source rights.</p></details>
-      <details><summary>Is live WhatsApp checkout already verified?<span aria-hidden="true">+</span></summary><p>No. The typed ZeroClaw adapter has automated contract tests, while live WhatsApp routing, sender authorization, delivery, and recovery still need validation.</p></details>
+    <section class="section faq-section" id="faq" aria-labelledby="faq-title"><div class="container faq-grid"><div class="faq-intro reveal"><p class="section-kicker">FAQ</p><h2 id="faq-title">Good<br><span>to know.</span></h2></div><div class="faq-list reveal">
+      <details><summary>Who is this for?<span aria-hidden="true">+</span></summary><p>Developers who want to accept SOL or USDC in their own app or store. It is a command-line tool, not a hosted checkout page.</p></details>
+      <details><summary>Do you hold my money or my keys?<span aria-hidden="true">+</span></summary><p>No. Your customer pays from their own wallet straight to your wallet. The CLI only needs your public wallet address and reads the blockchain to check the payment.</p></details>
+      <details><summary>Is it ready for real Mainnet payments?<span aria-hidden="true">+</span></summary><p>It has been tested on Solana devnet. A real paid Mainnet payment has not yet been verified end to end, so we recommend a small Mainnet test before you go live.</p></details>
+      <details><summary>What do I need to run it?<span aria-hidden="true">+</span></summary><p>Linux x64 with glibc 2.34 or newer, Node.js 20 or newer, and npm. You also need a Solana RPC endpoint and your public wallet address.</p></details>
+      <details><summary>Does the license expire?<span aria-hidden="true">+</span></summary><p>No. The version you receive keeps working. Updates are included for 12 months and technical support for 90 days.</p></details>
     </div></div></section>
 
-    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-card reveal"><div><p class="section-kicker">LET'S TALK</p><h2 id="contact-title">Build with evidence.<br><span>Start a conversation.</span></h2><p>Interested in the commercial distribution or a controlled pilot? Contact the project owner through GitHub. Checkout is coming soon.</p></div><a class="button button-light" href="https://github.com/asroryandesfar-art" target="_blank" rel="noopener noreferrer">Contact on GitHub <span aria-hidden="true">↗</span></a></div></section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-card reveal"><div><p class="section-kicker">CONTACT SALES</p><h2 id="contact-title">Buy a US$200<br><span>license.</span></h2><p data-sales-note>Our sales contact is being set up and will appear here before orders open. No payment is taken on this website.</p></div><a class="button button-light" href="#contact" data-sales data-sales-primary hidden>Contact Sales <span aria-hidden="true">↗</span></a></div></section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-main"><a class="brand" href="#top" aria-label="ZeroClaw Solana Pay, back to top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M8 10h20L8 26h20" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28" cy="10" r="2.1" fill="currentColor"/></svg></span><span class="brand-name">ZeroClaw <span>Solana Pay</span></span></a><p>Non-Custodial SOL &amp; USDC Payment Verification for AI Agents</p><div class="footer-links"><a href="#overview">Overview</a><a href="#verification">Verification</a><a href="#license">License</a><a href="#faq">FAQ</a><a href="https://github.com/asroryandesfar-art" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> ZeroClaw Solana Pay</span><span>Built for verifiable payments. Mainnet live settlement pending.</span></div></footer>
+  <footer class="site-footer"><div class="container footer-main"><a class="brand" href="#top" aria-label="ZeroClaw Solana Pay, back to top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M8 10h20L8 26h20" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28" cy="10" r="2.1" fill="currentColor"/></svg></span><span class="brand-name">ZeroClaw <span>Solana Pay</span></span></a><p>Accept SOL and USDC payments in your app.</p><div class="footer-links"><a href="#demo">Demo</a><a href="#how-it-works">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="https://github.com/asroryandesfar-art" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> ZeroClaw Solana Pay</span><span>Independent Solana Pay tool. Not affiliated with ZeroClaw Labs.</span></div></footer>
 </body>
 </html>
