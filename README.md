@@ -10,7 +10,7 @@ Hero, demo video (https://youtu.be/t4aPitLXOmo, recorded on Solana devnet), how 
 
 ## Contact Sales
 
-Every **Contact Sales** button reads `salesContact` from `config.js`. It accepts only a `mailto:` address or an `https://` URL. While it is empty, the buttons scroll to the contact section, which says the sales contact is being set up. Set the official contact there; no checkout runs on this site and no payment is taken here.
+Every **Contact Sales** button reads `salesContact` from `config.js` (currently the owner-approved public WhatsApp sales link). It accepts only a `mailto:` address or an `https://` URL. While it is empty, the buttons scroll to the contact section, which says the sales contact is being set up. Set the official contact there; no checkout runs on this site and no payment is taken here.
 
 ## Preview
 
