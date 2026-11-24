@@ -18,4 +18,4 @@ Serve this directory with any static server, for example `npx http-server -a 127
 
 ## Disclosure
 
-Tested on Solana devnet. A real paid Mainnet SOL/USDC payment has not yet been verified end to end. The existing Rust core keeps its MIT/Apache-2.0 rights; the paid offer adds the packaged distribution, license, updates, and support.
+Supports Solana Mainnet. The payment workflow was tested on Solana Devnet. The existing Rust core keeps its MIT/Apache-2.0 rights; the paid offer adds the packaged distribution, license, updates, and support.
