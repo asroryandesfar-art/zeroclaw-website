@@ -313,3 +313,7 @@ p { color: var(--muted); }
 .video-link { margin: 18px 0 0; text-align: center; }
 .video-link a { color: var(--cyan); font-weight: 700; }
 .video-link a:hover { text-decoration: underline; }
+
+/* Download */
+#download .workflow-list { margin-top: 28px; }
+.checkout-caption .sha { display: block; margin-top: 4px; overflow-wrap: anywhere; font-size: .68rem; }
